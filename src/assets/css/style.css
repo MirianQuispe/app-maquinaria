@@ -1,0 +1,135 @@
+:root {
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --wippi-purple-dark : #3A0536;
+    --wippi-purple : #430D41;
+
+    --wippi-orange:#ff532c;/*#FF6C26;*/
+    --wippi-orange-dark: #fd3508;
+    --wippi-red:#C81437;
+    --wippi-yellow:#FFA519;
+    --wippi-yellow-dark: #EE9F1E;
+    --wippi-yellow-ligth: #F6D924;
+
+}
+
+h4,h5,h6{
+    font-weight: normal;
+}
+/* change the background color */
+.navbar-custom {
+    background-color:#3A0037;;
+}
+/* change the brand and text color */
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+    color:#CEBFCD;
+}
+/* change the link color */
+.navbar-custom .navbar-nav .nav-link {
+    color: rgba(255,255,255,.5);
+}
+/* change the color of active or hovered links */
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:focus .nav-link,
+.navbar-custom .nav-item:hover .nav-link {
+    color: #ffffff;
+}
+
+.text-danger-wippi{
+    color: var(--wippi-orange-dark);
+}
+
+/*********************** BUTTONS ************************/
+.wippi-btn {
+    display: inline-block;
+    font-weight: 400;
+    color: inherit;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 0.5px solid transparent;
+    padding: 0.675rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    .wippi-btn {
+      transition: none;
+    }
+  }
+  
+/* wippi orange */
+
+.btn-wippi-orange{
+    color: var(--white);
+    background-color: var(--wippi-orange);
+    border-color: var(--wippi-orange);
+  }
+  .btn-wippi-orange:hover{
+    color: var(--white);
+    background-color:var(--wippi-orange-dark);
+    border-color: var(--wippi-orange-dark);
+  }
+  .btn-wippi-orange:focus,.btn-wippi-orange.focus{
+    border-color: var(--wippi-orange-dark);
+    box-shadow: 0 0 0 0.2rem rgba(249, 155, 112,0.5);
+  }
+
+/* wippi yellow */
+.btn-wippi-purple{
+    color: var(--white);
+    background-color: var(--wippi-purple);
+    border-color: var(--wippi-orange);
+    
+  }
+  .btn-wippi-purple:hover{
+    color: var(--white);
+    background-color:var(--wippi-purple-dark);
+    border-color: var(--wippi-orange-dark);
+  
+  }
+  .btn-wippi-purple:focus,.btn-wippi-orange.focus{
+    border-color: var(--wippi-orange-dark);
+    box-shadow: 0 0 0 0.4rem rgba(249, 155, 112,0.5);
+    
+  }
+
+
+/* buscador */
+
+.wrapper_buscador{
+    position: absolute;
+    background-color: #ffffff;
+    /*border-top: solid 1px #e6e6e6;*/
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2);
+    padding: 0;
+    z-index: 1005;
+    margin-top: 0;
+    min-width: 0;
+    border-bottom-right-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+.list-group-item-action:hover{
+    cursor: pointer;
+}
+
+.mascara{ 
+    mask: url(../img/html/mascara.fw.png) no-repeat center center;
+    background-image: url(../img/html/logo.png);
+} 
+.mascara-fondo{
+    mask:url(../img/html/fondo-2.fw.png) no-repeat center center;
+}
