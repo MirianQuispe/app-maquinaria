@@ -1,0 +1,21 @@
+
+<div mat-dialog-title *ngIf="data.tipo=='exito'">
+    <div  class="example-button-container ">
+        <button mat-fab class="bg-success">
+            <i class="fa fa-check"></i>
+        </button>
+    </div>
+</div>
+<div mat-dialog-title *ngIf="data.tipo=='error'">
+    <div  class="example-button-container ">
+        <button mat-fab class="bg-danger">
+            <i class="fa fa-times"></i>
+        </button>
+    </div>
+</div>
+<div mat-dialog-content>
+    <p>{{data.mensaje}}</p>
+</div>
+<div mat-dialog-actions>
+    <button mat-button class="btn btn-dark mx-auto" (click)="confirmado()" cdkFocusInitial>OK</button>
+</div>
