@@ -20,6 +20,9 @@ import {MatStepperModule} from '@angular/material/stepper';
 import {MatIconModule} from '@angular/material/icon';
 import { MaquinaFormComponent } from './componentes/maquinas/maquina-form/maquina-form.component';
 import { MaquinaListComponent } from './componentes/maquinas/maquina-list/maquina-list.component'
+import { DialogMensajeComponent } from './componentes/dialog/dialog-mensaje/dialog-mensaje.component';
+import { LoadingComponent } from './componentes/loading/loading.component';
+import { DialogConfirmacionComponent } from './componentes/dialog/dialog-confirmacion/dialog-confirmacion.component';
 
 //Servicios
 import { MaquinaService} from './servicios/maquina.service';
@@ -30,7 +33,10 @@ registerLocaleData(localeEs); //con esta funcion hacemos el registro del lenguaj
   declarations: [
     AppComponent,
     MaquinaFormComponent,
-    MaquinaListComponent
+    MaquinaListComponent,
+    DialogMensajeComponent,
+    LoadingComponent,
+    DialogConfirmacionComponent
 
   ],
   imports: [
