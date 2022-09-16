@@ -1,1 +1,119 @@
-<p>maquina-form works!</p>
+<div class="container-12">
+    <div class="col">
+        <div class="d-flex justify-content-center">
+            <h3>Registro de nueva máquina</h3>
+        </div>
+    </div>
+    <form class="style-form" #equipoForm="ngForm">
+        <div class="form-row">
+            <div class="form-group col-8">
+                <mat-form-field>
+                    <mat-label>Nombre</mat-label>
+                    <input matInput placeholder="equipo" class="form-control" name="nombre"
+                        [(ngModel)]="maquina.nombre" #nombre="ngModel" required>
+                    <mat-error *ngIf="nombre.invalid">
+                        {{getErrorMessage("Ingrese un nombre")}}
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <div class="form-group col-4">
+                <mat-form-field>
+                    <mat-label>Marca</mat-label>
+                    <input matInput placeholder="Mercedes Benz" class="form-control" name="marca"
+                        [(ngModel)]="maquina.marca" #marca="ngModel" required>
+                    <mat-error *ngIf="marca.invalid">
+                        {{getErrorMessage("Ingrese una marca")}}
+                    </mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-8">
+                <mat-form-field>
+                    <mat-label>Modelo</mat-label>
+                    <input matInput placeholder="Modelo" class="form-control" name="modelo"
+                        [(ngModel)]="maquina.modelo" #modelo="ngModel" required>
+                    <mat-error *ngIf="modelo.invalid">
+                        Ingrese modelo
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <div class="form-group col-4">
+                <mat-form-field>
+                    <mat-label>Año de Fabricación</mat-label>
+                    <input matInput type="number" class="form-control" name="anio" [(ngModel)]="maquina.anio"
+                        #anio="ngModel" required>
+                    <mat-error *ngIf="anio.invalid">
+                        Ingrese año
+                    </mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-6">
+                <mat-form-field *ngIf="maquina.numeroPatente==null">
+                    <mat-label>Nº Serie</mat-label>
+                    <input matInput placeholder="Numero de serie" class="form-control" name="numeroSerie"
+                        [(ngModel)]="maquina.numeroSerie" #numeroSerie="ngModel" required>
+                    <mat-error *ngIf="numeroSerie.invalid">
+                        Ingrese un número de serie
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field *ngIf="maquina.numeroPatente!=null">
+                    <mat-label>Nº Serie</mat-label>
+                    <input matInput placeholder="Numero de serie" class="form-control" name="numeroSerie"
+                        [(ngModel)]="maquina.numeroSerie">
+                </mat-form-field>
+            </div>
+            <div class="form-group col-6">
+                <mat-form-field *ngIf="maquina.numeroSerie==null">
+                    <mat-label>Patente</mat-label>
+                    <input matInput placeholder="Número de patente" class="form-control" name="numeroPatente"
+                        [(ngModel)]="maquina.numeroPatente" #numeroPatente="ngModel" required>
+                    <mat-error *ngIf="numeroPatente.invalid">
+                        Ingrese un número de patente
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field *ngIf="maquina.numeroSerie!=null">
+                    <mat-label>Patente</mat-label>
+                    <input matInput placeholder="Número de patente" class="form-control" name="numeroPatente"
+                        [(ngModel)]="maquina.numeroPatente">
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-6">
+                <mat-form-field>
+                    <mat-label>Nº de Chasis</mat-label>
+                    <input matInput placeholder="Número de chasis" class="form-control" name="numeroChasis"
+                        [(ngModel)]="maquina.numeroChasis">
+                </mat-form-field>
+            </div>
+            <div class="form-group col-6">
+                <mat-form-field>
+                    <mat-label>Nº de Motor</mat-label>
+                    <input matInput placeholder="Número de motor" class="form-control" name="numeroMotor"
+                        [(ngModel)]="maquina.numeroMotor">
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-12">
+                <mat-form-field>
+                    <mat-label>Observaciones</mat-label>
+                    <textarea matInput class="form-control" #input maxlength="6000" name="observaciones"
+                        [(ngModel)]="maquina.observaciones" rows="4"></textarea>
+
+                    <mat-hint align="end">{{input.value?.length || 0}}/6000</mat-hint>
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="form-group d-flex justify-content-end">
+            <button class="btn  btn-dark mb-3" [routerLink]="['/inventario']" routerLinkActive="router-link-active">
+                <i class="fas fa-arrow-circle-left"></i> Volver</button>
+            <button class="btn btn-primary mb-3 ml-2" (click)="verificarPrimerPaso(equipoForm.form.valid)"> Guardar
+                <i class="fas fa-chevron-circle-right"></i></button>
+        </div>
+    </form>
+</div>
+        
