@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.style-form {
+    min-width: 150px;
+    max-width: 1000px;
+    width: 100%;
+  }
+  
+mat-form-field {
+    width: 100%;
+}
+
+.example-button-container {
+  display: flex;
+  justify-content: center;
+  min-width: 200px;
+}
+
+.danger-icon {
+  color: red;
+}
+
+.orange-icon {
+  color: #FF6347;  /* #FF7F50; #FF8C00;*/
+}
